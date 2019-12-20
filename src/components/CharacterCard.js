@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export default function CharacterCard({ character }) {
   return (
@@ -14,6 +14,16 @@ export default function CharacterCard({ character }) {
   );
 }
 
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+`;
+
 const Card = styled.div`
   padding: 2rem;
   border-radius: 3px;
@@ -22,6 +32,7 @@ const Card = styled.div`
   width: calc(33% - 2rem);
   margin: 1rem;
   box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25);
+  animation: ${fadeIn} 1s ease-out forwards;
 
   &:nth-of-type(2n) {
     background-color: #14de57;
