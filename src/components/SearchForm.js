@@ -4,13 +4,20 @@ import styled from "styled-components";
 export default function SearchForm({ setFilterTerm, setQueryType }) {
   return (
     <FilterContainer>
-      <Label htmlFor="filter">Filter by Character Name:</Label>
-      <select onChange={e => setQueryType(e.target.value)}>
-        <option value="name">Name</option>
-        <option value="species">Species</option>
-        <option value="origin">Origin</option>
-        <option value="location">Location</option>
-      </select>
+      <Label htmlFor="filter">
+        Filter by Character{" "}
+        <span>
+          {" "}
+          <Select onChange={e => setQueryType(e.target.value)}>
+            <option value="name">Name</option>
+            <option value="species">Species</option>
+            <option value="origin">Origin</option>
+            <option value="location">Location</option>
+          </Select>
+        </span>
+        :
+      </Label>
+
       <Input
         type="text"
         id="filter"
@@ -54,4 +61,20 @@ const Input = styled.input`
   color: white;
   font-size: 12px;
   margin-top: 5px;
+`;
+
+const Select = styled.select`
+  border: none;
+  background-color: #14de57;
+  font-family: "IBM Plex Mono", monospace;
+  border-radius: 3px;
+
+  option {
+    background-color: #14abde;
+
+    &:hover {
+      background-color: #14de57;
+      color: white;
+    }
+  }
 `;

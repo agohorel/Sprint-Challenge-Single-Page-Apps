@@ -37,8 +37,6 @@ export default function CharacterList() {
     setFilterResults(results);
   }, [filterTerm, characters, queryType]);
 
-  console.log(queryType);
-
   return (
     <Wrapper>
       <SearchForm
