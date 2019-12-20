@@ -31,6 +31,7 @@ const Label = styled.label`
   font-size: 14px;
   display: block;
   text-align: center;
+  font-weight: bolder;
 `;
 
 const FilterContainer = styled.div`
@@ -61,6 +62,7 @@ const Input = styled.input`
   color: white;
   font-size: 12px;
   margin-top: 5px;
+  font-family: "IBM Plex Mono", monospace;
 `;
 
 const Select = styled.select`
@@ -68,6 +70,7 @@ const Select = styled.select`
   background-color: #14de57;
   font-family: "IBM Plex Mono", monospace;
   border-radius: 3px;
+  font-weight: bolder;
 
   option {
     background-color: #14abde;
