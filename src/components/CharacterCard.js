@@ -4,6 +4,9 @@ import styled, { keyframes } from "styled-components";
 export default function CharacterCard({ character }) {
   return (
     <Card>
+      <Avatar
+        src={`https://rickandmortyapi.com/api/character/avatar/${character.id}.jpeg`}
+      ></Avatar>
       <h2>{character.name}</h2>
       <p>Species: {character.species}</p>
       <p>Origin: {character.origin.name}</p>
@@ -29,7 +32,7 @@ const Card = styled.div`
   border-radius: 3px;
   background-color: #14abde;
   display: inline-block;
-  width: calc(33% - 2rem);
+  width: calc(25% - 2rem);
   margin: 1rem;
   box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.25);
   animation: ${fadeIn} 1s ease-out forwards;
@@ -45,4 +48,10 @@ const Card = styled.div`
   p {
     font-size: 16px;
   }
+`;
+
+const Avatar = styled.img`
+  border-radius: 50%;
+  width: 75px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 `;
