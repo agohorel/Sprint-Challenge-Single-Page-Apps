@@ -29,6 +29,15 @@ const FilterContainer = styled.div`
   padding: 0.75rem;
   border-radius: 3px;
   width: calc(33% - 2rem);
+  transition: 0.2s ease-out width;
+
+  @media (max-width: 975px) {
+    width: calc(50% - 2rem);
+  }
+
+  @media (max-width: 600px) {
+    width: calc(100% - 2rem);
+  }
 `;
 
 const Input = styled.input`

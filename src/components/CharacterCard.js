@@ -48,6 +48,18 @@ const Card = styled.div`
   p {
     font-size: 16px;
   }
+
+  @media (max-width: 1300px) {
+    width: calc(33% - 2rem);
+  }
+
+  @media (max-width: 975px) {
+    width: calc(50% - 2rem);
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 const Avatar = styled.img`
