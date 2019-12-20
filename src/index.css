@@ -16,14 +16,12 @@ body {
 }
 
 main {
-  width: 95vw;
-  min-height: 80vh;
+  width: calc(100vw - 5rem);
+  min-height: calc(100vh - 5rem);
   margin: 35px auto;
   background: #1c1c1c;
   border-radius: 3px;
   padding: 15px;
-  box-shadow: 0 19px 38px rgba(50, 50, 50, 0.25),
-    0 15px 12px rgba(50, 50, 50, 0.15);
 }
 
 .grid-view {
