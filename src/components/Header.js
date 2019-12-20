@@ -24,8 +24,10 @@ const Nav = styled.nav`
 const NavLink = styled(Link)`
   text-decoration: none;
   color: #14de57;
+  padding: 10px;
 
   &:hover {
     color: #14abde;
+    background-color: #0c0c0c;
   }
 `;
