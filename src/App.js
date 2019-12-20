@@ -7,18 +7,18 @@ import CharacterList from "./components/CharacterList.js";
 
 export default function App() {
   return (
-    <main>
-      <Header />
-      <Router>
+    <Router>
+      <main>
+        <Header />
         <Switch>
-          <Route exact path="/">
-            <WelcomePage></WelcomePage>
-          </Route>
           <Route path="/characters">
             <CharacterList></CharacterList>
           </Route>
+          <Route path="/">
+            <WelcomePage></WelcomePage>
+          </Route>
         </Switch>
-      </Router>
-    </main>
+      </main>
+    </Router>
   );
 }

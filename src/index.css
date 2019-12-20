@@ -21,7 +21,6 @@ main {
   margin: 35px auto;
   background: #1c1c1c;
   border-radius: 3px;
-  padding: 15px;
 }
 
 .grid-view {
@@ -47,4 +46,5 @@ main {
 header h1 {
   text-align: center;
   color: white;
+  padding: 1rem;
 }
