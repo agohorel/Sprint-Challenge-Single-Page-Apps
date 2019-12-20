@@ -25,7 +25,7 @@ const FilterContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #9c9c9c;
+  background-color: #6c6c6c;
   padding: 0.75rem;
   border-radius: 3px;
   width: calc(33% - 2rem);

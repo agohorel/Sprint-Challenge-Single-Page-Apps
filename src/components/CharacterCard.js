@@ -8,6 +8,8 @@ export default function CharacterCard({ character }) {
       <p>Species: {character.species}</p>
       <p>Origin: {character.origin.name}</p>
       <p>Status: {character.status}</p>
+      <p>Location: {character.location.name}</p>
+      <p>Appears in {character.episode.length} episodes</p>
     </Card>
   );
 }
