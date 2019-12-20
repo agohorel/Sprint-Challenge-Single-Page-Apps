@@ -44,7 +44,10 @@ main {
 } */
 
 header h1 {
+  font-size: calc(18px + 3.5vw);
   text-align: center;
-  color: white;
   padding: 1rem;
+  background-image: linear-gradient(to bottom right, #14de57, #14abde);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
