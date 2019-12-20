@@ -1,10 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function SearchForm({ setFilterTerm }) {
+export default function SearchForm({ setFilterTerm, setQueryType }) {
   return (
     <FilterContainer>
       <Label htmlFor="filter">Filter by Character Name:</Label>
+      <select onChange={e => setQueryType(e.target.value)}>
+        <option value="name">Name</option>
+        <option value="species">Species</option>
+        <option value="origin">Origin</option>
+        <option value="location">Location</option>
+      </select>
       <Input
         type="text"
         id="filter"

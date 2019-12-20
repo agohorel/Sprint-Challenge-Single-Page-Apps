@@ -9,6 +9,7 @@ import SearchForm from "./SearchForm";
 
 export default function CharacterList() {
   const [characters, setCharacters] = useState([]);
+  const [queryType, setQueryType] = useState("name");
   const [filterTerm, setFilterTerm] = useState("");
   const [filterResults, setFilterResults] = useState([]);
 
@@ -22,16 +23,28 @@ export default function CharacterList() {
   }, []);
 
   useEffect(() => {
-    const results = characters.filter(character =>
-      character.name.toLowerCase().includes(filterTerm.toLowerCase())
-    );
-
+    const results = characters.filter(character => {
+      if (queryType === "origin" || queryType === "location") {
+        return character[queryType].name
+          .toLowerCase()
+          .includes(filterTerm.toLowerCase());
+      } else {
+        return character[queryType]
+          .toLowerCase()
+          .includes(filterTerm.toLowerCase());
+      }
+    });
     setFilterResults(results);
-  }, [filterTerm, characters]);
+  }, [filterTerm, characters, queryType]);
+
+  console.log(queryType);
 
   return (
     <Wrapper>
-      <SearchForm setFilterTerm={setFilterTerm}></SearchForm>
+      <SearchForm
+        setFilterTerm={setFilterTerm}
+        setQueryType={setQueryType}
+      ></SearchForm>
       {characters.length ? (
         <CardsList>
           {filterResults.map(character => (
