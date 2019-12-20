@@ -9,7 +9,9 @@ export default function WelcomePage() {
         <ImageWrapper>
           <Image
             className="main-img"
-            src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+            src={`https://rickandmortyapi.com/api/character/avatar/${Math.floor(
+              Math.random() * 493
+            )}.jpeg`}
             alt="rick"
           />
         </ImageWrapper>
@@ -42,4 +44,5 @@ const Image = styled.img`
   border-radius: 50%;
   margin-top: 5rem;
   width: 25vw;
+  min-width: 200px;
 `;
