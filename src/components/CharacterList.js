@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import styled from "styled-components";
 
 import Card from "./CharacterCard";
 import SearchForm from "./SearchForm";
@@ -25,11 +26,25 @@ export default function CharacterList() {
   }, [filterTerm, characters]);
 
   return (
-    <section className="character-list">
+    <Wrapper>
       <SearchForm setFilterTerm={setFilterTerm}></SearchForm>
-      {filterResults.map(character => (
-        <Card key={character.id} character={character}></Card>
-      ))}
-    </section>
+      <CardsList>
+        {filterResults.map(character => (
+          <Card key={character.id} character={character}></Card>
+        ))}
+      </CardsList>
+    </Wrapper>
   );
 }
+
+const CardsList = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
